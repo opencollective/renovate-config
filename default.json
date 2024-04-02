@@ -3,5 +3,9 @@
   "extends": [
     "config:base",
     ":preserveSemverRanges"
+  ],
+  "schedule": [
+    "every weekday after 2:00 am before 6:00 am",
+    "every weekend"
   ]
 }
