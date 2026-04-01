@@ -1,11 +1,18 @@
 {
   "description": "Default preset for use with Open Collective repos",
   "extends": [
-    "config:base",
+    "config:best-practices",
     ":preserveSemverRanges"
   ],
   "schedule": [
     "every weekday after 2:00 am before 6:00 am",
     "every weekend"
+  ],
+  "packageRules": [
+    {
+      "description": "Our own packages are trusted, update immediately without any delay",
+      "matchPackageNames": ["@opencollective/*"],
+      "minimumReleaseAge": null
+    }
   ]
 }
