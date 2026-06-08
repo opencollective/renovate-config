@@ -17,7 +17,7 @@
     {
       "description": "Do not pin trusted GitHub-owned actions",
       "matchDatasources": ["github-tags", "github-digest"],
-      "matchPackageNames": ["actions/*", "github/*"],
+      "matchPackageNames": ["actions/*", "github/*", "postgres", "redis", "opensearchproject/opensearch", "codecov/test-results-action"],
       "pinDigests": false
     }
   ]
