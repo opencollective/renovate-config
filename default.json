@@ -13,6 +13,12 @@
       "description": "Our own packages are trusted, update immediately without any delay",
       "matchPackageNames": ["@opencollective/*"],
       "minimumReleaseAge": null
+    },
+    {
+      "description": "Do not pin trusted GitHub-owned actions",
+      "matchDatasources": ["github-tags", "github-digest"],
+      "matchPackageNames": ["actions/*", "github/*"],
+      "pinDigests": false
     }
   ]
 }
