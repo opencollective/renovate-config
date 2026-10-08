@@ -19,6 +19,12 @@
       "matchDatasources": ["github-tags", "github-digest"],
       "matchPackageNames": ["actions/*", "github/*", "postgres", "redis", "opensearchproject/opensearch", "codecov/test-results-action"],
       "pinDigests": false
+    },
+    {
+      "description": "Production runs PostgreSQL 16: keep every repo's CI database on 16.x",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["postgres"],
+      "allowedVersions": "<17"
     }
   ]
 }
