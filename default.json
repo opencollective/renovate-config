@@ -17,8 +17,20 @@
     {
       "description": "Do not pin trusted GitHub-owned actions",
       "matchDatasources": ["github-tags", "github-digest"],
-      "matchPackageNames": ["actions/*", "github/*", "postgres", "redis", "opensearchproject/opensearch", "codecov/test-results-action"],
+      "matchPackageNames": ["actions/*", "github/*", "codecov/test-results-action"],
       "pinDigests": false
+    },
+    {
+      "description": "Do not pin CI service images: their digests change on every upstream rebuild and only add PR noise",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["postgres", "redis", "opensearchproject/opensearch"],
+      "pinDigests": false
+    },
+    {
+      "description": "Production runs PostgreSQL 16: keep every repo's CI database on 16.x",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["postgres"],
+      "allowedVersions": "<17"
     }
   ]
 }
