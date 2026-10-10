@@ -33,10 +33,10 @@
       "allowedVersions": "<17"
     },
     {
-      "description": "Production runs Valkey 9 (Heroku Key-Value Store): keep every repo's CI cache on 9.x",
+      "description": "Production runs Valkey 9.1 (Heroku Key-Value Store): keep every repo's CI cache on 9.1. Raise the cap when Heroku upgrades; the floating minor tag can be a release candidate (9.2 was 9.2.0-rc1)",
       "matchDatasources": ["docker"],
       "matchPackageNames": ["valkey/valkey"],
-      "allowedVersions": "<10"
+      "allowedVersions": "<9.2"
     }
   ]
 }
