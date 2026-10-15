@@ -27,6 +27,12 @@
       "pinDigests": false
     },
     {
+      "description": "Do not pin the Node image: no deploy or CI builds our Dockerfiles (Heroku uses buildpacks), so its digests only add PR noise",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["node"],
+      "pinDigests": false
+    },
+    {
       "description": "Production runs PostgreSQL 16: keep every repo's CI database on 16.x",
       "matchDatasources": ["docker"],
       "matchPackageNames": ["postgres"],
